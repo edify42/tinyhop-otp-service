@@ -1,0 +1,14 @@
+hash: df8b60123c0568bf70846f9b7e8d28ef84636b01a4be56e7bc60265a23c34ce4
+updated: 2019-03-07T17:26:24.294518+11:00
+imports:
+- name: github.com/boombuler/barcode
+  version: 6c824513baccd76c674ce72112c29ef550187b08
+  subpackages:
+  - qr
+  - utils
+- name: github.com/pquerna/otp
+  version: be78767b3e392ce45ea73444451022a6fc32ad0d
+  subpackages:
+  - hotp
+  - totp
+testImports: []
