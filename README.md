@@ -11,16 +11,23 @@ I use to use a docker container for this but my Chromebook can't run docker (no 
 
 A golang binary is much faster in generating the OTP code and doesn't require a running instance of docker.
 
-## Usage
+## Build
 
-(Assuming you've `go get` dependencies and built the damn binary)
+I'm using [glide](https://github.com/Masterminds/glide) for the dependency management. You should too.
+
+## Testing
+
+```
+make build
+```
 
 `./otp-codegen sweetOTPSecret`
 `123432`
 
 
 ## Recommendations
-- Put the binary somewhere on your $PATH if you want to call it from any shell location.
-- Use a script installed on your $PATH (e.g. a github one called `github-otp`) which contains your OTP secret and call the `otp-codegen` binary from that to spit out 6 digits to STDOUT.
+* Run the `make install` command and have `$GOPATH/bin` in your `$PATH`, else
+* Put the binary somewhere on your $PATH if you want to call it from any shell location.
+* Use a script installed on your $PATH (e.g. a github one called `github-otp`) which contains your OTP secret and call the `otp-codegen` binary from that to spit out 6 digits to STDOUT.
 
 I like the one liner `github-otp | pbcopy` on a Macbook which simplifies the login process.
